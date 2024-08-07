@@ -4,7 +4,15 @@ const app = express();
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+
+
+
+
 const user = require("./api/user.js")
+const customer=require("./api/customer.js");
+
+
+
 
 const corsConfig = {
   origin: true,
@@ -23,6 +31,12 @@ app.use("/api/v2/user",(req,res,next)=>{
   
   next()
 }, user);
+
+app.use("/api/v2/customer",(req,res,next)=>{
+  console.log("Hi");
+  
+  next()
+}, customer);
 
 
 // config
