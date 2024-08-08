@@ -95,7 +95,7 @@ const CustomerSchema = new mongoose.Schema(
         products: [{
             id: {
                 type: mongoose.Types.ObjectId,
-                ref: "Product"
+                ref: "Elastic"
             },
         }]
     },
