@@ -10,12 +10,14 @@ router.post(
   "/create-customer",
   catchAsyncErrors(async (req, res, next) => {
     try {
-      const customerData = req.body;
+        const customerData = req.body;
+        console.log("post")
       // customerData.billingAddress.state=req.body.billingAddress.state.label;
       // customerData.billingAddress.city=req.body.billingAddress.city.label;
       // customerData.shippingAddress.state=req.body.shippingAddress.state.label;
       // customerData.shippingAddress.city=req.body.shippingAddress.city.label;
-      const customer = await Customer.create(customerData);
+        const customer = await Customer.create(customerData);
+        console.log(customer)
       
       res.status(201).json({
         success: true,

@@ -32,8 +32,8 @@ app.use("/api/v2/user",(req,res,next)=>{
   next()
 }, user);
 
-app.use("/api/v2/customer",(req,res,next)=>{
-  console.log("Hi");
+app.use("/api/v2/customer", (req, res, next) => {
+    console.log(req.method)
   
   next()
 }, customer);

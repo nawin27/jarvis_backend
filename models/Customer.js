@@ -16,9 +16,6 @@ const CustomerSchema = new mongoose.Schema(
             max: 50,
             unique: true,
         },
-        address: {
-            type: {},
-        },
         gstin: {
             type: String,
             default: "",
@@ -86,7 +83,7 @@ const CustomerSchema = new mongoose.Schema(
         paymentTerms: {
             type: String,
             required: true,
-            default: ""
+            default: "30"
         },
         transporter: {
             type: {},
